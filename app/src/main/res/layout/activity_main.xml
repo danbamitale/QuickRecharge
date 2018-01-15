@@ -37,31 +37,71 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="333"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:hint="333" />
 
             <EditText
                 android:id="@+id/recharegeTokenText"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:hint="xxxx-xxxx-xxxx-xxxx"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:hint="xxxx-xxxx-xxxx-xxxx" />
         </LinearLayout>
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:layout_width="wrap_content"
+                android:id="@+id/_9mobileRadButton"
+                style="@style/network_radbutton_style"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/ic_launcher"
-                android:gravity="bottom"
+                android:button="@drawable/etisalat_selector" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/airtelRadButton"
+                style="@style/network_radbutton_style"
+                android:button="@drawable/airtel_selector"
+
                 />
 
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/gloRadButton"
+                style="@style/network_radbutton_style"
+                android:button="@drawable/glo_selector"
+                />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/mtnRadButton"
+                style="@style/network_radbutton_style"
+                android:button="@drawable/mtn_selector"
+
+                />
         </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/sim1"
+                style="@style/networkType_radbutton_style"
+                android:text="SIM1" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/sim2"
+                style="@style/networkType_radbutton_style"
+                android:text="SIM2" />
+        </RadioGroup>
+
+
 
 
     </LinearLayout>
