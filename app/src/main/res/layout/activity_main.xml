@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="vertical"
-        android:background="@android:color/darker_gray">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:orientation="vertical">
+
+        <com.danbamitale.quickrecharge.custom_ui.CameraSourcePreview
+            android:id="@+id/cameraSourcePreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
     <LinearLayout
@@ -38,7 +39,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:hint="333" />
+                android:hint="333"
+                android:inputType="number"/>
 
             <EditText
                 android:id="@+id/recharegeTokenText"
@@ -46,10 +48,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:gravity="center"
-                android:hint="xxxx-xxxx-xxxx-xxxx" />
+                android:hint="xxxx-xxxx-xxxx-xxxx"
+                android:inputType=""/>
         </LinearLayout>
 
         <RadioGroup
+            android:id="@+id/networkRadGroup"
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:gravity="center"
@@ -84,6 +88,7 @@
         </RadioGroup>
 
         <RadioGroup
+            android:id="@+id/simRadGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -91,18 +96,38 @@
             android:layout_marginTop="16dp">
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/sim1"
+                android:id="@+id/sim1RadButton"
                 style="@style/networkType_radbutton_style"
-                android:text="SIM1" />
+                android:text="SIM1"
+                android:checked="true"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/sim2"
+                android:id="@+id/sim2RadButton"
                 style="@style/networkType_radbutton_style"
                 android:text="SIM2" />
         </RadioGroup>
 
 
+        <FrameLayout
+            android:id="@+id/rechargeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:padding="16dp"
+            android:clickable="true">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_stroke"
+                android:layout_gravity="center"/>
+
+           <ImageView
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/circle_solid"/>
+        </FrameLayout>
 
     </LinearLayout>
 
